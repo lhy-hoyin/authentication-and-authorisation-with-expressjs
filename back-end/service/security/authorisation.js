@@ -10,7 +10,7 @@ const authorisation = (role) => {
 		console.log("Access Token", xAccessToken);
 		if (xAccessToken) {
 			const decoded = jwt.verify(xAccessToken, config.TOKEN_KEY);
-			user = decoded.account_type;
+			user = decoded.user.account_type;
 			if (convertToRole(user) >= convertToRole(role)) {
 				return next();
 			}
