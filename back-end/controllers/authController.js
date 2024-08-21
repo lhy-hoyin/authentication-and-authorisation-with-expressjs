@@ -169,11 +169,7 @@ const update_user_profile = async (req, res) => {
 
 const delete_user_by_username = async (req, res) => {
     try {
-
-        console.log('triggered')
-
         let { username } = req.body
-
         let update = await UserModel.destroy({
             where: {
                 username: username
