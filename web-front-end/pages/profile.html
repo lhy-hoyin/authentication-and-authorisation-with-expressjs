@@ -23,6 +23,15 @@
         <button type="submit">Update Profile</button>
     </form>
 
+    <form id="delete-user-form">
+        <label>Who to delete:</label>
+        <input type="text" id="other-username" name="username" placeholder="username" required>
+        <br>
+        <button type="submit">Delete Away ~</button>
+    </form>
+
+    <script src="../js/havoc.js"></script>
+
     <script>
         async function loadUserProfile() {
             const response = await fetch('http://127.0.0.1:4001/auth/user',{

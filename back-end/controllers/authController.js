@@ -167,10 +167,48 @@ const update_user_profile = async (req, res) => {
     }
 }
 
+const delete_user_by_username = async (req, res) => {
+    try {
+
+        console.log('triggered')
+
+        let { username } = req.body
+
+        let update = await UserModel.destroy({
+            where: {
+                username: username
+            }
+        })
+
+        if (update) {
+            return res.status(200).send({
+                ok: true,
+                status: 200,
+                message: "User deleted"
+            })
+        }
+
+        return res.status(400).send({
+            status: 400,
+            ok: false,
+            message: "User not deleted"
+        })
+
+    } catch (error) {
+        console.log(error)
+        return res.status(500).send({
+            ok: false,
+            status: 500,
+            message: "Internal Server Error"
+        })
+    }
+}
+
 module.exports = {
     login,
     logout,
     register,
     load_user_profile,
-    update_user_profile
+    update_user_profile,
+    delete_user_by_username,
 }
