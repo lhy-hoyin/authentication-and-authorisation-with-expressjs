@@ -39,11 +39,17 @@ The person can then proceed into the room and access the sensitive documents in 
 In the context of a typical user-based system, we would not want everyone to have the ability to delete accounts.
 Although it depends on the given system requirements, such systems usually give 2 groups of user the ability of delete accounts.
 One would be the account holder themselves, the other are those entrusted with admin privileges.
+Other normal users should not have the ability to delete the user's account.
 
 To ensure that only these 2 groups of users can delete accounts, we need to first ensure that they are indeed a user of the system. 
 This process reflects authentication of the user.
 However, just verifying that they are users of the system is insufficient. We need to ensure that they are specific users (i.e the account holder or admins).
 Hence, we need to conduct authorisation to give the ability of deleting the account to the correct users.
+
+### Change in requirements
+
+Perhaps at some point, the system owners decided that user rights are very important. No one else except the user themselves should be allowed to delete the account.
+This change in requirements will demand a change in the implementation of authorisation, so that even those with admin prilivages cannot delete other users.
 
 ## Conclusion
 
