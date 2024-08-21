@@ -36,9 +36,9 @@ The person can then proceed into the room and access the sensitive documents in 
 
 ## Requirements Considerations
 
-In the context of a typical user-based system, we would not what everyone to have the ability to delete accounts.
+In the context of a typical user-based system, we would not want everyone to have the ability to delete accounts.
 Although it depends on the given system requirements, such systems usually give 2 groups of user the ability of delete accounts.
-One, would the the account holder themselves, the other are those entrusted with admin privileges.
+One would be the account holder themselves, the other are those entrusted with admin privileges.
 
 To ensure that only these 2 groups of users can delete accounts, we need to first ensure that they are indeed a user of the system. 
 This process reflects authentication of the user.
