@@ -1,3 +1,7 @@
+StackUp Campaign: [Authentication and Authorisation with ExpressJS](https://earn.stackup.dev/campaigns/authentication-and-authorisation-with-expressjs)
+
+---
+
 # Can/Should delete user functionality be done after authentication?
 
 To answer the question whether delete user functionality can be done after authentication,
