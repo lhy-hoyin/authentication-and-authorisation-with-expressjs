@@ -184,8 +184,8 @@ const delete_user_by_username = async (req, res) => {
             })
         }
 
-        return res.status(400).send({
-            status: 400,
+        return res.status(422).send({
+            status: 422,
             ok: false,
             message: "User not deleted"
         })
